@@ -193,6 +193,51 @@ const MiniSearchIcon = () => (
   </svg>
 );
 
+const ArrowIcon = () => (
+  <svg
+    xmlns="http://www.w3.org/2000/svg"
+    width="27"
+    height="42"
+    viewBox="0 0 27 42"
+    fill="none"
+  >
+    <path
+      d="M23 38L6 21L23 4"
+      fill="none"
+      stroke="#fff"
+      strokeWidth="8"
+      strokeLinecap="round"
+    />
+  </svg>
+);
+
+const PlayIcon = () => (
+  <svg
+    xmlns="http://www.w3.org/2000/svg"
+    width="16"
+    height="19"
+    viewBox="0 0 16 19"
+    fill="none"
+  >
+    <path d="M16 9.5L0.249999 18.5933L0.25 0.406733L16 9.5Z" fill="white" />
+  </svg>
+);
+
+const DotsIcon = () => (
+  <svg
+    xmlns="http://www.w3.org/2000/svg"
+    width="16"
+    height="6"
+    viewBox="0 0 16 6"
+    fill="none"
+  >
+    <rect x="0.5" y="0.5" width="15" height="5" rx="2.5" stroke="white" />
+    <circle cx="4" cy="3" r="1" fill="white" />
+    <circle cx="8" cy="3" r="1" fill="white" />
+    <circle cx="12" cy="3" r="1" fill="white" />
+  </svg>
+);
+
 export {
   SearchIcon,
   MusicIcon,
@@ -201,4 +246,7 @@ export {
   MicrophoneIcon,
   EarphoneIcon,
   MiniSearchIcon,
+  ArrowIcon,
+  PlayIcon,
+  DotsIcon,
 };

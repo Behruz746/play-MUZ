@@ -2,7 +2,7 @@ import React, { useState } from "react";
 import AppContext from "./context/AppContext";
 import {
   Navbar,
-  MusicAlbom,
+  MusicList,
   MusicInfo,
   MusicPlayer,
   Slider,
@@ -18,7 +18,7 @@ function App() {
         <div className="w-full">
           <MusicInfo />
           <Slider />
-          <MusicAlbom />
+          <MusicList />
         </div>
         {/* <MusicPlayer /> */}
       </div>

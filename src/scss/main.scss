@@ -8,6 +8,7 @@
   font-size: 100%;
   font: inherit;
   vertical-align: baseline;
+  line-height: normal;
 }
 
 @import "./font";
@@ -29,7 +30,34 @@ body {
 }
 
 .background {
-  background: url("../../public/img/webp/background.webp") no-repeat;
+  background: url("/img/webp/background.webp") no-repeat;
   background-position: center;
   background-size: cover;
+}
+
+.splide__arrow {
+  &:nth-child(1) {
+    width: 50px;
+    height: 100%;
+    transform: translateX(-83px) translateY(-50%) rotate(-180deg) !important;
+    background: transparent;
+    opacity: 1;
+    border-radius: 0;
+    svg {
+      width: 27px;
+      height: 42px;
+    }
+  }
+  &:nth-child(2) {
+    width: 50px;
+    height: 100%;
+    transform: translateX(53px) translateY(-50%) rotate(-180deg) !important;
+    background: transparent;
+    opacity: 1;
+    border-radius: 0;
+    svg {
+      width: 27px;
+      height: 42px;
+    }
+  }
 }
