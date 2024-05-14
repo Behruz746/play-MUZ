@@ -211,11 +211,11 @@ const ArrowIcon = () => (
   </svg>
 );
 
-const PlayIcon = () => (
+const PlayIcon = ({ width, height }) => (
   <svg
     xmlns="http://www.w3.org/2000/svg"
-    width="16"
-    height="19"
+    width={width}
+    height={height}
     viewBox="0 0 16 19"
     fill="none"
   >
@@ -238,6 +238,37 @@ const DotsIcon = () => (
   </svg>
 );
 
+const SkepIcon = () => (
+  <svg
+    xmlns="http://www.w3.org/2000/svg"
+    width="25"
+    height="25"
+    viewBox="0 0 25 25"
+    fill="none"
+  >
+    <rect
+      x="21"
+      y="23"
+      width="1"
+      height="21"
+      transform="rotate(180 21 23)"
+      fill="white"
+    />
+    <rect
+      x="23"
+      y="23"
+      width="1"
+      height="21"
+      transform="rotate(180 23 23)"
+      fill="white"
+    />
+    <path
+      d="M-1.24185e-06 12.5L18.75 1.67468L18.75 23.3253L-1.24185e-06 12.5Z"
+      fill="white"
+    />
+  </svg>
+);
+
 export {
   SearchIcon,
   MusicIcon,
@@ -249,4 +280,5 @@ export {
   ArrowIcon,
   PlayIcon,
   DotsIcon,
+  SkepIcon,
 };

@@ -9,10 +9,9 @@ function MusicList() {
         <h1 className="text-left text-[11px] font-bold leading-normal text-[#fff]">
           LATEST ALBUM
         </h1>
-
-        <div className="mt-[20px]">
+        <div className="mt-[20px] grid grid-cols-2">
           {MusicListData.map((item, idx) => (
-            <MusicListItem {...item} index={idx} />
+            <MusicListItem {...item} index={idx} key={idx} />
           ))}
         </div>
       </div>

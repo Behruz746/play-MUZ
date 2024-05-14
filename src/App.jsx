@@ -13,14 +13,14 @@ function App() {
 
   return (
     <AppContext.Provider value={{ musicList }}>
-      <div className="flex">
+      <div className="w-full flex">
         <Navbar />
-        <div className="w-full">
+        <div className="w-full mb-[90px]">
           <MusicInfo />
           <Slider />
           <MusicList />
         </div>
-        {/* <MusicPlayer /> */}
+        <MusicPlayer />
       </div>
     </AppContext.Provider>
   );

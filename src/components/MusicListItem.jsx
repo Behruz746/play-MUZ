@@ -10,7 +10,7 @@ function MusicListItem({ img, name, auther, mp3Link, index }) {
           {newIndex}
         </h1>
         <button type="button" className="p-[10px]">
-          <PlayIcon />
+          <PlayIcon width={21} height={21} />
         </button>
         <div>
           <img width={27} height={27} src={img} alt="music img" />
