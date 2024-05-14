@@ -8,9 +8,28 @@
   font-size: 100%;
   font: inherit;
   vertical-align: baseline;
-  font-family: "Inter";
 }
+
 @import "./font";
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
+
+body {
+  font-family: "Inter";
+  background-color: #1b1a1a;
+  color: #fff;
+}
+
+.container {
+  max-width: 1294px;
+  width: 100%;
+  margin: 0 auto;
+  padding: 0 14px;
+}
+
+.background {
+  background: url("../../public/img/webp/background.webp") no-repeat;
+  background-position: center;
+  background-size: cover;
+}

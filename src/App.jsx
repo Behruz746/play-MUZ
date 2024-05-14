@@ -2,7 +2,6 @@ import React, { useState } from "react";
 import AppContext from "./context/AppContext";
 import {
   Navbar,
-  Header,
   MusicAlbom,
   MusicInfo,
   MusicPlayer,
@@ -14,7 +13,15 @@ function App() {
 
   return (
     <AppContext.Provider value={{ musicList }}>
-      <h1>Hello play MUZ</h1>
+      <div className="flex">
+        <Navbar />
+        <div className="w-full">
+          <MusicInfo />
+          <Slider />
+          <MusicAlbom />
+        </div>
+        {/* <MusicPlayer /> */}
+      </div>
     </AppContext.Provider>
   );
 }
