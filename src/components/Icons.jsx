@@ -211,8 +211,9 @@ const ArrowIcon = () => (
   </svg>
 );
 
-const PlayIcon = ({ width, height }) => (
+const PlayIcon = ({ width, height, classes }) => (
   <svg
+    className={classes}
     xmlns="http://www.w3.org/2000/svg"
     width={width}
     height={height}
@@ -238,8 +239,9 @@ const DotsIcon = () => (
   </svg>
 );
 
-const SkepIcon = () => (
+const SkepIcon = ({ classes }) => (
   <svg
+    className={classes}
     xmlns="http://www.w3.org/2000/svg"
     width="25"
     height="25"

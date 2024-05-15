@@ -5,7 +5,7 @@ function MusicInfo() {
   return (
     <section className="background py-[25px]">
       <div className="container">
-        <div className="max-w-[250px] w-full flex items-center gap-[2px] rounded-[30px] bg-[#443F3F] opacity-8">
+        <div className="max-w-[250px] w-full flex items-center gap-[2px] rounded-[30px] bg-[#443F3F] opacity-8 sticky top-[25px] mdd:max-w-full">
           <MiniSearchIcon />
           <input
             type="text"
@@ -13,11 +13,11 @@ function MusicInfo() {
             className="py-[6px] border-none outline-none bg-transparent placeholder:italic"
           />
         </div>
-        <div className="mt-[28px] flex items-end flex-col">
-          <h1 className="text-right text-[64px] font-bold leading-normal text-[#fff]">
+        <div className="mt-[28px] flex items-end flex-col mdd:mt-[15px]">
+          <h1 className="text-right text-[64px] font-bold leading-normal text-[#fff] mdd:text-[45px]">
             WHAT’S NEW?
           </h1>
-          <div className="max-w-[732px] w-full mt-[18px]">
+          <div className="max-w-[732px] w-full mt-[18px] mdd:mt-[0px]">
             <h2 className="text-right text-[13px] font-bold leading-normal text-[#fff]">
               Switzerland's Nemo wins Eurovision as UK comes 18th
             </h2>
@@ -37,7 +37,7 @@ function MusicInfo() {
           </div>
         </div>
 
-        <div className="w-full flex justify-center mt-[182px] xl:mt-[82px]">
+        <div className="w-full flex justify-center mt-[182px] xl:mt-[82px] mdd:mt-[30px]">
           <button
             type="button"
             className="py-[17px] px-[67px] rounded-[50px] text-[12px] font-normal leading-normal text-[#fff] bg-[#443F3F] opacity-8  ease-in duration-150 hover:bg-[#5a5454]"

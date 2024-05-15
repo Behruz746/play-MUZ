@@ -49,4 +49,17 @@ const MusicListData = [
   },
 ];
 
-export { MusicListData };
+const slideMusicData = [
+  { link: "/", img: "/img/png/Rectangle 5.png", altImg: "music albom" },
+  { link: "/", img: "/img/png/Rectangle 6.png", altImg: "music albom" },
+  { link: "/", img: "/img/png/Rectangle 7.png", altImg: "music albom" },
+  { link: "/", img: "/img/png/Rectangle 8.png", altImg: "music albom" },
+  { link: "/", img: "/img/png/Rectangle 9.png", altImg: "music albom" },
+  { link: "/", img: "/img/png/Rectangle 5.png", altImg: "music albom" },
+  { link: "/", img: "/img/png/Rectangle 6.png", altImg: "music albom" },
+  { link: "/", img: "/img/png/Rectangle 7.png", altImg: "music albom" },
+  { link: "/", img: "/img/png/Rectangle 8.png", altImg: "music albom" },
+  { link: "/", img: "/img/png/Rectangle 9.png", altImg: "music albom" },
+];
+
+export { MusicListData, slideMusicData };

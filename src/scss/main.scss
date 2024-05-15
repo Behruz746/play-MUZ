@@ -9,6 +9,8 @@
   font: inherit;
   vertical-align: baseline;
   line-height: normal;
+  transition: all 0.1s ease;
+  // outline: 1px solid #d00;
 }
 
 @import "./font";
@@ -48,6 +50,10 @@ body {
       width: 27px;
       height: 42px;
     }
+
+    @media screen and (max-width: 1460px) {
+      transform: translateX(0px) translateY(-50%) rotate(-180deg) !important;
+    }
   }
   &:nth-child(2) {
     width: 50px;
@@ -59,6 +65,10 @@ body {
     svg {
       width: 27px;
       height: 42px;
+    }
+
+    @media screen and (max-width: 1460px) {
+      transform: translateX(0px) translateY(-50%) rotate(-180deg) !important;
     }
   }
 }

@@ -10,7 +10,7 @@ import {
 
 function Navbar() {
   return (
-    <aside className="max-w-[270px] w-full h-[100vh] flex items-start sticky top-0 left-0">
+    <aside className="max-w-[270px] w-full h-[100vh] flex items-start sticky top-0 left-0 lg:max-w-[190px] mdd:hidden">
       <nav className="w-full px-[29px] py-[65px] flex flex-col gap-[149px] ">
         <div className="w-full flex flex-col gap-[21px]">
           <h1 className="text-[13px] font-bold leading-normal text-[#fff]">

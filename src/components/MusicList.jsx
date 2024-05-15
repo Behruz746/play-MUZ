@@ -4,12 +4,12 @@ import { MusicListData } from "../data/data";
 
 function MusicList() {
   return (
-    <section className="w-full mt-[46px]">
+    <section className="w-full mt-[46px] md:mt-[23px]">
       <div className="container">
-        <h1 className="text-left text-[11px] font-bold leading-normal text-[#fff]">
+        <h1 className="text-left text-[11px] font-bold leading-normal text-[#fff] mdd:text-[18px]">
           LATEST ALBUM
         </h1>
-        <div className="mt-[20px] grid grid-cols-2">
+        <div className="mt-[20px] grid grid-cols-2 mdd:grid-cols-1">
           {MusicListData.map((item, idx) => (
             <MusicListItem {...item} index={idx} key={idx} />
           ))}

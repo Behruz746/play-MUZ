@@ -15,7 +15,7 @@ function App() {
     <AppContext.Provider value={{ musicList }}>
       <div className="w-full flex">
         <Navbar />
-        <div className="w-full mb-[90px]">
+        <div className="w-full mb-[90px] mdd:mb-[120px]">
           <MusicInfo />
           <Slider />
           <MusicList />
