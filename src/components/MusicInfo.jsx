@@ -1,19 +1,14 @@
-import React from "react";
-import { MiniSearchIcon } from "./Icons";
+import React, { useContext } from "react";
+import AppContext from "../context/AppContext";
+import { MiniSearchIcon, MenuIcon } from "./Icons";
 
 function MusicInfo() {
+  const { setMenu } = useContext(AppContext);
+
   return (
     <section className="background py-[25px]">
       <div className="container">
-        <div className="max-w-[250px] w-full flex items-center gap-[2px] rounded-[30px] bg-[#443F3F] opacity-8 sticky top-[25px] mdd:max-w-full">
-          <MiniSearchIcon />
-          <input
-            type="text"
-            placeholder="search"
-            className="py-[6px] border-none outline-none bg-transparent placeholder:italic"
-          />
-        </div>
-        <div className="mt-[28px] flex items-end flex-col mdd:mt-[15px]">
+        <div className="mt-[50px] flex items-end flex-col">
           <h1 className="text-right text-[64px] font-bold leading-normal text-[#fff] mdd:text-[45px]">
             WHAT’S NEW?
           </h1>
