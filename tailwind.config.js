@@ -11,6 +11,7 @@ export default {
       xlg: { max: "1090px" },
       lg: { max: "991px" },
       md: { max: "767px" },
+      midd: { min: "690px" },
       mdd: { max: "690px" },
       sm: { max: "550px" },
       smm: { max: "470px" },

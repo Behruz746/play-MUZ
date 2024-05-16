@@ -14,7 +14,7 @@ function Navbar() {
 
   return (
     <aside
-      className={`max-w-[270px] w-full h-[100vh] flex items-start sticky top-0 left-0 mdd:fixed bg-[#1b1a1a] mdd:z-[100] lg:max-w-[190px] md:max-w-full mdd:${
+      className={`max-w-[270px] w-full h-[100vh] midd:flex items-start sticky top-0 left-0 mdd:fixed bg-[#1b1a1a] mdd:z-[100] lg:max-w-[190px] md:max-w-full ${
         menuToggle ? "flex" : "hidden"
       }`}
     >

@@ -1,10 +1,6 @@
-import React, { useContext } from "react";
-import AppContext from "../context/AppContext";
-import { MiniSearchIcon, MenuIcon } from "./Icons";
+import React from "react";
 
 function MusicInfo() {
-  const { setMenu } = useContext(AppContext);
-
   return (
     <section className="background py-[25px]">
       <div className="container">

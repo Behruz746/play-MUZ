@@ -10,7 +10,6 @@ import {
 } from "./components";
 
 function App() {
-  const [musicList, setMusicList] = useState([]);
   const [menuToggle, setMenuToggle] = useState(false);
 
   useEffect(() => {
