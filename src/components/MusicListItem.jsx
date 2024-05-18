@@ -1,7 +1,15 @@
 import React, { useState } from "react";
 import { PlayIcon, DotsIcon } from "./Icons";
 
-function MusicListItem({ img, name, auther, mp3Link, index }) {
+// {
+//   name: "Hato",
+//   auther: "Shoxrux & Bob",
+//   src: "https://uzhits.net/upload/files/2015-02/shoxrux-hato_(uzhits.net).mp3",
+//   toggle: true,
+//   id: 0,
+// },
+
+function MusicListItem({ img, name, auther, src, index, toggle }) {
   const [overItem, setOverItem] = useState(false);
   let newIndex = index < 10 ? `0${index}` : index;
 

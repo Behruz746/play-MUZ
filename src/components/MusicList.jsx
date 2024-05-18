@@ -1,6 +1,6 @@
 import React from "react";
 import { MusicListItem } from "./";
-import { MusicListData } from "../data/data";
+import { MusicListData, musicList } from "../data/data";
 
 function MusicList() {
   return (
@@ -10,7 +10,7 @@ function MusicList() {
           LATEST ALBUM
         </h1>
         <div className="mt-[20px] grid grid-cols-2 mdd:grid-cols-1">
-          {MusicListData.map((item, idx) => (
+          {musicList.map((item, idx) => (
             <MusicListItem {...item} index={idx} key={idx} />
           ))}
         </div>
