@@ -1,6 +1,6 @@
 import React, { useState, useEffect, useRef } from "react";
 import AppContext from "./context/AppContext";
-import { musicList } from "./data/data";
+import { musicList, slideMusicData } from "./data/data";
 import {
   Navbar,
   MusicList,
@@ -8,6 +8,7 @@ import {
   MusicPlayer,
   Slider,
   Header,
+  ModalImg,
 } from "./components";
 
 function App() {
@@ -15,6 +16,9 @@ function App() {
   const [songs, setSongs] = useState(musicList);
   const [menuToggle, setMenuToggle] = useState(false);
   const [isPlaying, setIsPlaying] = useState(false);
+  const [modalImgToggle, setModalImgToggle] = useState(false);
+  const [playerToggle, setPlayerToggle] = useState(false);
+  const [modalImg, setModalImg] = useState("");
   const [currentSong, setCurrentSong] = useState(musicList[0]);
   const [timer, setTimer] = useState("00 : 00");
   const clickRef = useRef();
@@ -39,13 +43,33 @@ function App() {
     });
   };
 
-  function formatTime(seconds) {
+  const setMusicPlayer = (data, id) => {
+    setIsPlaying(true);
+    setCurrentSong(data[id]);
+  };
+
+  const imgModalToggle = (img) => {
+    setModalImgToggle((prev) => !prev);
+    setModalImg(img);
+
+    if (!modalImgToggle) {
+      document.body.style.overflow = "hidden";
+    } else {
+      document.body.style.overflow = "auto";
+    }
+  };
+
+  const bigPlayer = () => {
+    setPlayerToggle((prev) => !prev);
+  };
+
+  const formatTime = (seconds) => {
     var hours = Math.floor(seconds / 3600);
     var minutes = Math.floor((seconds - hours * 3600) / 60);
     var remainingSeconds = seconds - hours * 3600 - minutes * 60;
     let arr = [minutes.toFixed(), remainingSeconds.toFixed()];
     return arr;
-  }
+  };
 
   const checkWidth = (e) => {
     let width = clickRef.current.clientWidth;
@@ -166,18 +190,24 @@ function App() {
         skipBack,
         checkWidth,
         clickRef,
+        setMusicPlayer,
+        imgModalToggle,
+        modalImg,
+        setModalImgToggle,
+        bigPlayer,
+        playerToggle,
       }}
     >
       <div className="w-full flex">
         <Navbar />
-        <div className="w-full mb-[90px] mdd:mb-[120px]">
+        <div className="w-full mb-[90px] mdd:mb-[155px]">
           <Header />
           <MusicInfo />
-          <Slider />
+          <Slider data={slideMusicData} />
           <MusicList />
         </div>
-        {/* {currentSong.length && <MusicPlayer />} */}
         <MusicPlayer />
+        {modalImgToggle && <ModalImg />}
         <audio src={currentSong.src} ref={audioElem} onTimeUpdate={onPlaying} />
       </div>
     </AppContext.Provider>

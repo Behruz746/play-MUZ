@@ -293,11 +293,11 @@ const PauseIcon = ({ width, height, classes }) => (
     version="1.1"
     id="Capa_1"
     xmlns="http://www.w3.org/2000/svg"
-    xmlns:xlink="http://www.w3.org/1999/xlink"
+    xmlnsXlink="http://www.w3.org/1999/xlink"
     width={width}
     height={height}
     viewBox="0 0 277.338 277.338"
-    xml:space="preserve"
+    xmlSpace="preserve"
   >
     <g>
       <path
@@ -312,7 +312,14 @@ const PauseIcon = ({ width, height, classes }) => (
   </svg>
 );
 
+const ArrowIcon2 = () => (
+  <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" fill="#fff">
+    <path d="M7.293 4.707 14.586 12l-7.293 7.293 1.414 1.414L17.414 12 8.707 3.293 7.293 4.707z" />
+  </svg>
+);
+
 export {
+  ArrowIcon2,
   MenuIcon,
   SearchIcon,
   MusicIcon,

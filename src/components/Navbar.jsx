@@ -32,7 +32,7 @@ function Navbar() {
               <img
                 width="32"
                 height="32"
-                src="../../public/img/png/close.png"
+                src="/img/png/close.png"
                 alt="close-window"
               />
             </button>

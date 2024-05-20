@@ -10,7 +10,7 @@
   vertical-align: baseline;
   line-height: normal;
   transition: all 0.1s ease;
-  // outline: 1px solid #d00;
+  // outline: 1px solid #d00; // this is outline for fixed responsive bags
   color: #fff;
 }
 
@@ -18,6 +18,10 @@
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
+
+html {
+  scrollbar-gutter: stable;
+}
 
 body {
   font-family: "Inter";

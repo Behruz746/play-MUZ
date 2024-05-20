@@ -1,6 +1,6 @@
 import React from "react";
 import { MusicListItem } from "./";
-import { MusicListData, musicList } from "../data/data";
+import { musicList } from "../data/data";
 
 function MusicList() {
   return (

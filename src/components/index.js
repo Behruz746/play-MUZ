@@ -5,3 +5,4 @@ export { default as Slider } from "./Slider";
 export { default as MusicList } from "./MusicList";
 export { default as MusicPlayer } from "./MusicPlayer";
 export { default as MusicListItem } from "./MusicListItem";
+export { default as ModalImg } from "./ModalImg";

@@ -1,15 +1,11 @@
-import React, { useState } from "react";
+import React, { useState, useContext } from "react";
+import { musicList } from "../data/data";
+import AppContext from "../context/AppContext";
 import { PlayIcon, DotsIcon } from "./Icons";
 
-// {
-//   name: "Hato",
-//   auther: "Shoxrux & Bob",
-//   src: "https://uzhits.net/upload/files/2015-02/shoxrux-hato_(uzhits.net).mp3",
-//   toggle: true,
-//   id: 0,
-// },
-
-function MusicListItem({ img, name, auther, src, index, toggle }) {
+// function MusicListItem({ img, name, auther, src, index, toggle, id }) {
+function MusicListItem({ img, name, auther, src, index, toggle, id }) {
+  const { currentSong, setMusicPlayer } = useContext(AppContext);
   const [overItem, setOverItem] = useState(false);
   let newIndex = index < 10 ? `0${index}` : index;
 
@@ -23,9 +19,12 @@ function MusicListItem({ img, name, auther, src, index, toggle }) {
 
   return (
     <div
-      className="max-w-[579px] w-full  flex items-center justify-between cursor-pointer p-[5px] ease-in duration-150 hover:bg-[#5a5454]"
+      className={`max-w-[579px] w-full  flex items-center justify-between cursor-pointer p-[5px] ease-in duration-150 hover:bg-[#5a5454] ${
+        currentSong.name === name ? "bg-[#5a5454]" : ""
+      }`}
       onMouseMove={onItemOver}
       onMouseOut={onItemOut}
+      onClick={() => setMusicPlayer(musicList, id)}
     >
       <div className="max-w-[270px] w-full flex items-center justify-between mdd:max-w-[250px] gap-[5px]">
         <h1 className="text-[12px] font-normal leading-normal text-[#fff]">
