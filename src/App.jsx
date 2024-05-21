@@ -60,6 +60,11 @@ function App() {
   };
 
   const bigPlayer = () => {
+    if (!playerToggle) {
+      document.body.style.overflow = "hidden";
+    } else {
+      document.body.style.overflow = "auto";
+    }
     setPlayerToggle((prev) => !prev);
   };
 
@@ -128,7 +133,6 @@ function App() {
           currentTime[1] < 10 ? "0" + currentTime[1] : currentTime[1];
         let minutes =
           currentTime[0] < 10 ? "0" + currentTime[0] : currentTime[0];
-
         setTimer(`${minutes && minutes} : ${secounts && secounts}`);
       }, 500);
     }
@@ -136,16 +140,13 @@ function App() {
 
   useEffect(() => {
     const headerEl = document.querySelector(".header");
-    const menuIconSvg = document.querySelector(".menu-icon");
 
     function addBgClass() {
       headerEl.classList.add("bg-[#1b1a1a]");
-      menuIconSvg.style.fill = "#ffffff";
     }
 
     function removeBgClass() {
       headerEl.classList.remove("bg-[#1b1a1a]");
-      menuIconSvg.style.fill = "#1b1a1a";
     }
 
     function handleScroll() {

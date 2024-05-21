@@ -1,5 +1,3 @@
-const MusicListData = [];
-
 const musicList = [
   {
     name: "Still",
@@ -118,4 +116,4 @@ const slideMusicData = [
   },
 ];
 
-export { MusicListData, slideMusicData, musicList };
+export { slideMusicData, musicList };
