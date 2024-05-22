@@ -2,10 +2,9 @@ import React, { useContext } from "react";
 import AppContext from "../context/AppContext";
 import { Splide, SplideSlide, SplideTrack } from "@splidejs/react-splide";
 import { ArrowIcon } from "./Icons";
-import { slideMusicData } from "../data/data";
 
-function Slider({ data }) {
-  const { setMusicPlayer } = useContext(AppContext);
+function Slider() {
+  const { setMusicPlayer, sliderList, load } = useContext(AppContext);
   const sliderOptions = {
     pagination: false,
     rewind: false,
@@ -47,22 +46,28 @@ function Slider({ data }) {
         </h1>
         <Splide hasTrack={false} options={sliderOptions}>
           <SplideTrack>
-            {data.map(({ img, altImg, id }, idx) => (
-              <SplideSlide
-                key={idx}
-                className="cursor-pointer smm:justify-center smm:flex"
-              >
-                <img
-                  width={151}
-                  height={151}
-                  loading="lazy"
-                  src={img}
-                  className="w-[151px] h-[151px] mdd:w-[200px] mdd:h-auto smm:max-w-[280px] smm:w-full"
-                  alt={altImg}
-                  onClick={() => setMusicPlayer(slideMusicData, id)}
-                />
-              </SplideSlide>
-            ))}
+            {load ? (
+              <h1>loading</h1>
+            ) : (
+              <>
+                {sliderList.map(({ img, altImg, id }, idx) => (
+                  <SplideSlide
+                    key={idx}
+                    className="cursor-pointer smm:justify-center smm:flex"
+                  >
+                    <img
+                      width={151}
+                      height={151}
+                      loading="lazy"
+                      src={img}
+                      className="w-[151px] h-[151px] mdd:w-[200px] mdd:h-auto smm:max-w-[280px] smm:w-full"
+                      alt={altImg}
+                      onClick={() => setMusicPlayer(sliderList, id)}
+                    />
+                  </SplideSlide>
+                ))}
+              </>
+            )}
           </SplideTrack>
 
           <div className="splide__arrows">

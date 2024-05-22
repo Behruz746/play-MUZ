@@ -1,4 +1,5 @@
 import React, { useState, useEffect, useRef } from "react";
+import axios from "axios";
 import AppContext from "./context/AppContext";
 import { musicList, slideMusicData } from "./data/data";
 import {
@@ -13,15 +14,37 @@ import {
 
 function App() {
   const audioElem = useRef();
-  const [songs, setSongs] = useState(musicList);
+  const clickRef = useRef();
+  const [sliderList, setSliderList] = useState([]);
+  const [songs, setSongs] = useState([]);
+  const [load, setLoad] = useState(true);
   const [menuToggle, setMenuToggle] = useState(false);
   const [isPlaying, setIsPlaying] = useState(false);
   const [modalImgToggle, setModalImgToggle] = useState(false);
   const [playerToggle, setPlayerToggle] = useState(false);
   const [modalImg, setModalImg] = useState("");
-  const [currentSong, setCurrentSong] = useState(musicList[0]);
+  const [currentSong, setCurrentSong] = useState([]);
   const [timer, setTimer] = useState("00 : 00");
-  const clickRef = useRef();
+
+  async function fetchData() {
+    setLoad(true);
+    try {
+      const [sliderList, playList] = await Promise.all([
+        axios.get("https://68186937a45bb253.mokky.dev/slider_list"),
+        axios.get("https://68186937a45bb253.mokky.dev/music_list"),
+      ]);
+      setSliderList(sliderList.data);
+      setSongs(playList.data);
+      setCurrentSong(playList.data[0]);
+    } catch (error) {
+      console.log(`Error feching data: ${error}`);
+    }
+    setLoad(false);
+  }
+
+  useEffect(() => {
+    fetchData();
+  }, []);
 
   useEffect(() => {
     if (isPlaying) {
@@ -174,6 +197,10 @@ function App() {
   return (
     <AppContext.Provider
       value={{
+        load,
+        sliderList,
+        songs,
+        setSongs,
         menuToggle,
         setMenu,
         currentSong,
@@ -182,8 +209,6 @@ function App() {
         isPlaying,
         onPlaying,
         setCurrentSong,
-        songs,
-        setSongs,
         timer,
         setTimer,
         finishTime,
@@ -207,7 +232,7 @@ function App() {
           <Slider data={slideMusicData} />
           <MusicList />
         </div>
-        <MusicPlayer />
+        {currentSong && <MusicPlayer />}
         {modalImgToggle && <ModalImg />}
         <audio src={currentSong.src} ref={audioElem} onTimeUpdate={onPlaying} />
       </div>

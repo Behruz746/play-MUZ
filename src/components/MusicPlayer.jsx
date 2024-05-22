@@ -39,7 +39,13 @@ function MusicPlayer() {
           <img
             width={54}
             height={54}
-            src={currentSong.img}
+            src={
+              playerToggle
+                ? currentSong.img
+                : currentSong.mobileImg === ""
+                ? currentSong.img
+                : currentSong.mobileImg
+            }
             className={`w-[54px] h-[54px] rounded-full overflow-hidden transition-none  ${
               playerToggle
                 ? "mdd:max-w-[250px] mdd:w-full mdd:h-auto mdd:rounded-none"

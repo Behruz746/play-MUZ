@@ -38,19 +38,19 @@ function Navbar() {
             </button>
           </div>
           <ul className="flex flex-col gap-[13px] items-start">
-            <li className="w-full flex items-center gap-[11px] cursor-pointer text-[#fff] text-[13px] font-bold leading-normal ease-in duration-150 hover:bg-[#fff] hover:text-[#000]">
+            <li className="w-full flex items-center gap-[11px] cursor-pointer text-[#fff] text-[13px] font-bold leading-normal ease-in duration-150 hover:bg-[#fff] hover:text-[#000] svg-path-hover">
               <SearchIcon />
               DISCOVER
             </li>
-            <li className="w-full flex items-center gap-[11px] cursor-pointer text-[#fff] text-[13px] font-bold leading-normal ease-in duration-150 hover:bg-[#fff] hover:text-[#000]">
+            <li className="w-full flex items-center gap-[11px] cursor-pointer text-[#fff] text-[13px] font-bold leading-normal ease-in duration-150 hover:bg-[#fff] hover:text-[#000] svg-path-hover">
               <MusicIcon />
               GENRE
             </li>
-            <li className="w-full flex items-center gap-[11px] cursor-pointer text-[#fff] text-[13px] font-bold leading-normal ease-in duration-150 hover:bg-[#fff] hover:text-[#000]">
+            <li className="w-full flex items-center gap-[11px] cursor-pointer text-[#fff] text-[13px] font-bold leading-normal ease-in duration-150 hover:bg-[#fff] hover:text-[#000] svg-path-hover">
               <EarphoneIcon />
               TOP CHARTS
             </li>
-            <li className="w-full flex items-center gap-[11px] cursor-pointer text-[#fff] text-[13px] font-bold leading-normal ease-in duration-150 hover:bg-[#fff] hover:text-[#000]">
+            <li className="w-full flex items-center gap-[11px] cursor-pointer text-[#fff] text-[13px] font-bold leading-normal ease-in duration-150 hover:bg-[#fff] hover:text-[#000] svg-path-hover">
               <MicrophoneIcon />
               PODCAST
             </li>
@@ -61,11 +61,11 @@ function Navbar() {
             LIBRARY
           </h1>
           <ul className="flex flex-col gap-[13px]">
-            <li className="w-full flex items-center gap-[11px] cursor-pointer text-[#fff] text-[13px] font-bold leading-normal ease-in duration-150 hover:bg-[#fff] hover:text-[#000]">
+            <li className="w-full flex items-center gap-[11px] cursor-pointer text-[#fff] text-[13px] font-bold leading-normal ease-in duration-150 hover:bg-[#fff] hover:text-[#000] svg-path-hover">
               <StarIcon />
               FAVOURITES
             </li>
-            <li className="w-full flex items-center gap-[11px] cursor-pointer text-[#fff] text-[13px] font-bold leading-normal ease-in duration-150 hover:bg-[#fff] hover:text-[#000]">
+            <li className="w-full flex items-center gap-[11px] cursor-pointer text-[#fff] text-[13px] font-bold leading-normal ease-in duration-150 hover:bg-[#fff] hover:text-[#000] svg-hover">
               <FileIcon />
               PLAYLIST
             </li>

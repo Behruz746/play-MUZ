@@ -29,12 +29,12 @@ function MusicInfo() {
         </div>
 
         <div className="w-full flex justify-center mt-[182px] xl:mt-[82px] mdd:mt-[30px]">
-          <button
-            type="button"
-            className="py-[17px] px-[67px] rounded-[50px] text-[12px] font-normal leading-normal text-[#fff] bg-[#443F3F] opacity-8  ease-in duration-150 hover:bg-[#5a5454]"
+          <a
+            href="#play-list"
+            className="py-[17px] px-[67px] rounded-[50px] text-[12px] font-normal leading-normal text-[#fff] bg-[#443f3f8d]  ease-in duration-150 hover:bg-[#5a5454]"
           >
             START
-          </button>
+          </a>
         </div>
       </div>
     </section>
